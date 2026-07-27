@@ -67,7 +67,7 @@ import AdminCategories from './pages/admin/Categories';
 import ReviewModeration from './pages/admin/ReviewModeration';
 import AdminFlashSales from './pages/admin/FlashSales';
 import WomensFashionAdmin from './pages/admin/womens-fashion/Dashboard';
-import ProductManager from './pages/Admin/ProductManager';
+import ProductManager from './pages/admin/ProductManager';
 
 function App() {
   const [showCompare, setShowCompare] = useState(false);
