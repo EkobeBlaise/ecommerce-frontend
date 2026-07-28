@@ -35,15 +35,15 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
           initial={{ scale: 0.9, y: 20 }}
           animate={{ scale: 1, y: 0 }}
           exit={{ scale: 0.9, y: 20 }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl"
+          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition z-10"
+            className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition z-10"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 text-gray-700 dark:text-gray-300" />
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
@@ -69,7 +69,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                   {product.brand}
                 </span>
               )}
-              <h2 className="text-2xl font-bold dark:text-white">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                 {product.name}
               </h2>
 
@@ -101,7 +101,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
 
               {/* Price */}
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-bold text-black dark:text-white">
+                <span className="text-3xl font-bold text-gray-900 dark:text-white">
                   {formatPrice(product.price)}
                 </span>
                 {product.oldPrice && (
@@ -130,20 +130,17 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                 >
                   <ShoppingCart className="w-4 h-4" /> Add to Cart
                 </button>
-                <button className="flex items-center gap-2 px-4 py-3 rounded-full border border-gray-300 dark:border-gray-600
-                 hover:bg-gray-100 
-                 dark:bg-white text-white-
-                 dark:hover:bg-white-800 transition">
+                <button className="flex items-center gap-2 px-4 py-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-700 dark:text-gray-300">
                   <Heart className="w-4 h-4" /> Wishlist
                 </button>
               </div>
 
               {/* Perks */}
               <div className="grid grid-cols-2 gap-2 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-2 text-xs text-white-500 dark:text-gray-400">
+                <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
                   <Truck className="w-4 h-4" /> Free Shipping
                 </div>
-                <div className="flex items-center gap-2 text-xs text-white-500 dark:text-gray-400">
+                <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
                   <Shield className="w-4 h-4" /> Secure Payment
                 </div>
               </div>
